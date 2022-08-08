@@ -1,0 +1,9 @@
+Table "subject_broker" {
+  "id" INT(11) [pk, not null, increment]
+  "subject_id" INT(11) [not null]
+  "broker_id" INT(11) [not null]
+
+Indexes {
+  (subject_id, broker_id) [unique, name: "subject_broker_id"]
+}
+}

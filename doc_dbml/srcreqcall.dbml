@@ -1,0 +1,22 @@
+Table "srcreqcall" {
+  "id" INT(11) [pk, not null, increment]
+  "crm_id" INT(11) [default: NULL]
+  "req_id" INT(11) [not null]
+  "ims_id" INT(11) [not null]
+  "email" VARCHAR(50) [not null, default: ""]
+  "phone" VARCHAR(50) [not null, default: ""]
+  "waktu" DATETIME [not null]
+  "comments" TEXT [default: NULL]
+  "notes" TEXT [default: NULL]
+  "source" VARCHAR(50) [default: "callback"]
+  "created_at" DATETIME [not null]
+  "updated_at" DATETIME [default: NULL]
+
+Indexes {
+  req_id [unique, name: "req_id"]
+  crm_id [name: "crm_id"]
+  ims_id [name: "ims_id"]
+  created_at [name: "created_at"]
+  updated_at [name: "updated_at"]
+}
+}

@@ -1,0 +1,9 @@
+Table "srcemail_subject" {
+  "id" INT(11) [pk, not null, increment]
+  "srcemail_id" INT(11) [not null]
+  "subject_id" INT(11) [not null]
+
+Indexes {
+  (srcemail_id, subject_id) [unique, name: "srcemail_subject_id"]
+}
+}

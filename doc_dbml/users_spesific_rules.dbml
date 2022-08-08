@@ -1,0 +1,9 @@
+Table "users_spesific_rules" {
+  "userid" INT(11) [not null]
+  "ruleid" INT(11) [not null]
+
+Indexes {
+  userid [name: "userid"]
+  (userid, ruleid) [pk]
+}
+}

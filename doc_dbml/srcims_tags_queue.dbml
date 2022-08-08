@@ -1,0 +1,7 @@
+Table "srcims_tags_queue" {
+  "id" INT(11) [pk, not null, increment]
+  "ims_id" INT(11) [not null]
+  "source" INT(11) [not null]
+  "tag" INT(11) [not null]
+  "modify_at" TIMESTAMP [default: `current_timestamp()`]
+}

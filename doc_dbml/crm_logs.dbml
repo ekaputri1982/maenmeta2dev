@@ -1,0 +1,15 @@
+Table "crm_logs" {
+  "id" BIGINT(20) [pk, not null, increment]
+  "event" BIGINT(20) [not null]
+  "source_id" BIGINT(20) [not null, note: 'subject']
+  "details" INT(11) [not null, note: 'action']
+  "action_id" VARCHAR(30) [default: NULL, note: 'object']
+  "target_id" BIGINT(20) [default: NULL, note: 'target']
+  "unread" TINYINT(1) [not null, default: "0", note: '0=unread; 1=read']
+
+Indexes {
+  details [name: "details"]
+  target_id [name: "target_id"]
+  source_id [name: "source_id"]
+}
+}

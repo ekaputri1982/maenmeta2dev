@@ -1,0 +1,7 @@
+Table "crm_timelines" {
+  "id" INT(11) [pk, not null, increment]
+  "event" VARCHAR(50) [not null]
+  "query" MEDIUMTEXT [not null, default: ""]
+  "icon" MEDIUMTEXT [not null, default: ""]
+  "template" MEDIUMTEXT [not null, default: ""]
+}

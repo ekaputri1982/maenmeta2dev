@@ -1,0 +1,12 @@
+Table "user_details" {
+  "userid" INT(11) [pk, not null]
+  "gender" TINYINT(4) [default: NULL, note: '1:m 2:f']
+  "nickname" VARCHAR(50) [not null]
+  "office" INT(11) [not null]
+  "collapsed" TINYINT(4) [not null, default: "0"]
+  "notif" TINYINT(4) [not null, default: "1"]
+
+Indexes {
+  office [name: "office"]
+}
+}

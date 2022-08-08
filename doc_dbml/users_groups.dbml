@@ -1,0 +1,10 @@
+Table "users_groups" {
+  "id" INT(11) [pk, not null]
+  "path" VARCHAR(1024) [default: NULL]
+  "name" VARCHAR(50) [default: NULL]
+
+Indexes {
+  name [unique, name: "name"]
+  path [unique, name: "path"]
+}
+}

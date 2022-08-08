@@ -1,0 +1,5 @@
+Table "server" {
+  "ID" INT(11) [pk, not null, increment]
+  "host" VARCHAR(50) [not null]
+  "manager" INT(11) [not null]
+}

@@ -1,0 +1,15 @@
+Table "users_query" {
+  "id" INT(11) [pk, not null, increment]
+  "user_id" INT(11) [not null]
+  "widget_id" VARCHAR(50) [not null]
+  "title" VARCHAR(255) [not null]
+  "query_text" TEXT [not null]
+  "created_at" DATETIME [default: `utc_timestamp()`]
+
+Indexes {
+  user_id [name: "user_id"]
+  widget_id [name: "widget_id"]
+  title [name: "title"]
+  created_at [name: "created_at"]
+}
+}

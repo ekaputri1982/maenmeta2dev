@@ -1,0 +1,15 @@
+Table "logs" {
+  "id" INT(11) [pk, not null, increment]
+  "userid" INT(11) [not null]
+  "action_type" VARCHAR(50) [default: ""]
+  "target" VARCHAR(50) [default: NULL]
+  "log" TEXT [default: NULL]
+  "dt" DATETIME [not null]
+
+Indexes {
+  userid [name: "logs_userid"]
+  action_type [name: "logs_action_type"]
+  dt [name: "logs_dt"]
+  target [name: "logs_target"]
+}
+}

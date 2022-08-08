@@ -1,0 +1,29 @@
+Table "grouping_share" {
+  "userid" INT(11) [not null]
+  "groupid" INT(11) [not null]
+  "cmd" VARCHAR(12) [not null]
+
+Indexes {
+  groupid [name: "FK_grouping_share_grouping"]
+  userid [name: "userid"]
+  (userid, groupid, cmd) [pk]
+}
+}
+
+Table "grouping" {
+  "id" INT(11) [pk, not null, increment]
+  "name" VARCHAR(128) [not null]
+  "mt4server" VARCHAR(12) [not null, default: ""]
+  "creator" INT(11) [not null, default: "0"]
+  "owner" INT(11) [not null, default: "0"]
+  "mkt_id" INT(11) [default: NULL]
+  "del" INT(11) [not null, default: "0"]
+
+Indexes {
+  name [name: "name"]
+  mt4server [name: "mt4server"]
+  owner [name: "owner"]
+}
+}
+
+Ref "FK_grouping_share_grouping":"grouping"."id" < "grouping_share"."groupid" [update: cascade, delete: cascade]

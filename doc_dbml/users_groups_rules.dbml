@@ -1,0 +1,9 @@
+Table "users_groups_rules" {
+  "groupid" INT(11) [not null]
+  "ruleid" INT(11) [not null]
+
+Indexes {
+  groupid [name: "groupid"]
+  (groupid, ruleid) [pk]
+}
+}

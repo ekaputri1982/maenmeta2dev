@@ -1,0 +1,14 @@
+Table "auto_chop" {
+  "id" INT(11) [pk, not null, increment]
+  "date" DATE [default: NULL]
+  "crm_id" INT(11) [not null]
+  "marketing" VARCHAR(10) [default: NULL]
+  "rolling" BIGINT(20) [default: NULL]
+  "expired" BIGINT(20) [default: NULL]
+  "created_at" DATETIME [default: `utc_timestamp()`]
+
+Indexes {
+  crm_id [name: "crm_id"]
+  marketing [name: "marketing"]
+}
+}

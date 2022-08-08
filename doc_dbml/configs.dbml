@@ -1,0 +1,4 @@
+Table "configs" {
+  "cfg" VARCHAR(64) [pk, not null]
+  "value" VARCHAR(255) [not null]
+}

@@ -1,0 +1,9 @@
+Table "subject" {
+  "id" INT(11) [pk, not null, increment]
+  "name" VARCHAR(50) [not null]
+  "user" INT(11) [default: NULL]
+
+Indexes {
+  name [unique, name: "name"]
+}
+}

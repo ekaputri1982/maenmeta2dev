@@ -1,0 +1,10 @@
+Table "email_support" {
+  "id" INT(11) [pk, not null, increment]
+  "source" VARCHAR(20) [not null]
+  "email" VARCHAR(50) [not null]
+  "status" TINYINT(3) [not null, default: "1"]
+
+Indexes {
+  source [name: "source"]
+}
+}

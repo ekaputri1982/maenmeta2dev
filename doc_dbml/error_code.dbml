@@ -1,0 +1,5 @@
+Table "error_code" {
+  "id" INT(10) [pk, not null, increment]
+  "file" VARCHAR(50) [not null]
+  "message" TEXT [not null]
+}

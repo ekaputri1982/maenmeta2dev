@@ -1,0 +1,5 @@
+Table "crm_logs_details" {
+  "id" INT(11) [pk, not null, increment]
+  "desc" VARCHAR(50) [not null]
+  "desc_pas" VARCHAR(50) [default: NULL]
+}

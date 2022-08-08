@@ -1,0 +1,3 @@
+Table "crm" {
+  "id" INT(11) [pk, not null, increment]
+}

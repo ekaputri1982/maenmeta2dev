@@ -1,0 +1,19 @@
+Table "srcmanual" {
+  "id" INT(11) [pk, not null, increment]
+  "crm_id" INT(11) [default: NULL]
+  "fullname" VARCHAR(50) [not null]
+  "email" VARCHAR(50) [default: NULL]
+  "phone" VARCHAR(50) [default: NULL]
+  "address" TEXT [default: NULL]
+  "event" INT(11) [not null]
+  "source" INT(11) [not null]
+  "notes" TEXT [default: NULL]
+  "user" INT(11) [not null]
+  "broker" INT(11) [default: NULL]
+
+Indexes {
+  source [name: "source"]
+  user [name: "admin"]
+  crm_id [name: "crm_id"]
+}
+}

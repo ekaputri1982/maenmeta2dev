@@ -1,0 +1,24 @@
+Table "srcemail" {
+  "id" INT(11) [pk, not null, increment]
+  "crm_id" INT(10) [default: NULL]
+  "fullname" VARCHAR(50) [not null]
+  "email" VARCHAR(50) [not null]
+  "phone" VARCHAR(50) [default: NULL]
+  "source" INT(11) [not null]
+  "support" INT(11) [not null, note: 'email support']
+  "event" INT(11) [not null]
+  "sbjemail" VARCHAR(50) [not null]
+  "content" TEXT [not null]
+  "reply" TEXT [default: NULL]
+  "user" INT(11) [not null]
+
+Indexes {
+  crm_id [name: "crm_id"]
+  user [name: "user"]
+  support [name: "support"]
+  source [name: "source"]
+  fullname [name: "fullname"]
+  email [name: "email"]
+  phone [name: "phone"]
+}
+}

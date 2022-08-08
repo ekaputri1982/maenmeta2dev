@@ -1,0 +1,10 @@
+Table "users_rules" {
+  "id" INT(11) [pk, not null]
+  "rules" VARCHAR(128) [not null]
+  "state" TINYINT(4) [not null, default: "0"]
+
+Indexes {
+  rules [unique, name: "rules"]
+  state [name: "state"]
+}
+}

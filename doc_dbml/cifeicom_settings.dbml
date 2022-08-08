@@ -1,0 +1,4 @@
+Table "cifeicom_settings" {
+  "name" VARCHAR(20) [pk, not null]
+  "value" TEXT [not null]
+}

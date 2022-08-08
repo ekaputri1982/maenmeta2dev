@@ -1,0 +1,14 @@
+Table "brokers" {
+  "id" INT(11) [pk, not null, increment]
+  "nickname" VARCHAR(50) [not null]
+  "codename" VARCHAR(50) [not null]
+  "realname" VARCHAR(50) [not null]
+  "ims" VARCHAR(50) [not null]
+  "parent_id" INT(11) [default: NULL]
+  "icon" VARCHAR(75) [default: NULL]
+  "status" TINYINT(4) [not null, default: "1"]
+
+Indexes {
+  parent_id [name: "parent_id"]
+}
+}

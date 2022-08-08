@@ -1,0 +1,12 @@
+Table "users_query_share" {
+  "id" INT(11) [pk, not null, increment]
+  "user_id" INT(11) [not null]
+  "query_id" INT(11) [not null]
+  "created_at" DATETIME [default: `utc_timestamp()`]
+
+Indexes {
+  user_id [name: "user_id"]
+  query_id [name: "query_id"]
+  created_at [name: "created_at"]
+}
+}

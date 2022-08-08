@@ -1,0 +1,19 @@
+Table "customer_dtl" {
+  "id" INT(11) [pk, not null, increment]
+  "customer" INT(11) [not null]
+  "method" VARCHAR(20) [default: NULL]
+  "location" VARCHAR(50) [default: NULL]
+  "dtime" BIGINT(20) [not null]
+  "response" VARCHAR(20) [default: NULL]
+  "phase" TINYINT(4) [not null, note: '1: follow up , 2: closing , 3: refused , 4: invalid , 5 : maintain']
+  "details" TEXT [not null]
+  "user" INT(11) [not null]
+  "updated" BIGINT(20) [not null]
+  "tags" VARCHAR(20) [default: NULL]
+
+Indexes {
+  phase [name: "idx_phase"]
+  customer [name: "customer"]
+  user [name: "user"]
+}
+}

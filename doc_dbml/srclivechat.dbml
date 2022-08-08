@@ -1,0 +1,28 @@
+Table "srclivechat" {
+  "id" INT(11) [pk, not null, increment]
+  "crm_id" INT(11) [default: NULL]
+  "fullname" VARCHAR(50) [not null]
+  "email" VARCHAR(50) [default: NULL]
+  "phone" VARCHAR(20) [default: NULL]
+  "online" TINYINT(4) [not null, default: "1", note: '1: on / 2: off']
+  "source" INT(11) [not null]
+  "media" VARCHAR(10) [default: NULL]
+  "event" INT(11) [not null]
+  "content" TEXT [not null]
+  "response" TEXT [default: NULL]
+  "ref_site" TEXT [default: NULL, note: 'from web (offline)']
+  "page" TEXT [default: NULL]
+  "user" INT(11) [default: NULL, note: 'onduty staff']
+  "method" VARCHAR(20) [default: NULL]
+  "location" VARCHAR(50) [default: NULL]
+  "claim" TINYINT(4) [not null, default: "0"]
+  "approve" TINYINT(4) [not null, default: "0"]
+  "MODIFY_TIME" BIGINT(20) [default: "0"]
+
+Indexes {
+  crm_id [name: "crm_id"]
+  user [name: "user"]
+  source [name: "source"]
+  email [name: "email"]
+}
+}

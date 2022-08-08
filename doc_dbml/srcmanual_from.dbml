@@ -1,0 +1,4 @@
+Table "srcmanual_from" {
+  "id" INT(11) [pk, not null, increment]
+  "name" VARCHAR(50) [not null]
+}

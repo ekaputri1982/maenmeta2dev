@@ -1,0 +1,6 @@
+Table "office" {
+  "id" TINYINT(4) [pk, not null, increment]
+  "location" VARCHAR(10) [not null]
+  "address" TEXT [not null]
+  "status" TINYINT(4) [not null, default: "1"]
+}

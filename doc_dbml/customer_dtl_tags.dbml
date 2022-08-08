@@ -1,0 +1,9 @@
+Table "customer_dtl_tags" {
+  "id" INT(11) [pk, not null, increment]
+  "detail_id" INT(11) [not null]
+  "tag_id" INT(11) [not null]
+
+Indexes {
+  (detail_id, tag_id) [unique, name: "customer_dtl_tag_id"]
+}
+}

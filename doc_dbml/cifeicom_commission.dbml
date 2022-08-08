@@ -1,0 +1,8 @@
+Table "cifeicom_commission" {
+  "id" INT(11) [pk, not null, increment]
+  "gid" INT(11) [not null]
+  "minlot" DOUBLE [not null]
+  "maxlot" DOUBLE [not null]
+  "usdlot" DOUBLE [not null]
+  "idrate" DOUBLE [not null]
+}

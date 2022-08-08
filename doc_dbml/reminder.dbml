@@ -1,0 +1,10 @@
+Table "reminder" {
+  "id" BIGINT(20) [pk, not null, increment]
+  "clientid" BIGINT(20) [not null]
+  "notes" TEXT [not null]
+  "datetime" BIGINT(20) [not null, default: "0"]
+  "postphone" BIGINT(20) [not null, default: "0"]
+  "userid" BIGINT(20) [not null]
+  "active" TINYINT(4) [not null]
+  "posted" BIGINT(20) [not null]
+}

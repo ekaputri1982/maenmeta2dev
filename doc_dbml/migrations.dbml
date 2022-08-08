@@ -1,0 +1,5 @@
+Table "migrations" {
+  "id" INT(11) [pk, not null, increment]
+  "timestamp" BIGINT(20) [not null]
+  "name" VARCHAR(255) [not null]
+}

@@ -1,0 +1,8 @@
+Table "users_tf" {
+  "user_id" INT(11) [pk, not null]
+  "tf_id" INT(11) [default: NULL]
+
+Indexes {
+  tf_id [unique, name: "tf_id"]
+}
+}

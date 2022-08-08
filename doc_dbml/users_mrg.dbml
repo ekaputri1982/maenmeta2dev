@@ -1,0 +1,8 @@
+Table "users_mrg" {
+  "user_id" INT(11) [pk, not null]
+  "mrg_id" INT(11) [default: NULL]
+
+Indexes {
+  mrg_id [unique, name: "mrg_id"]
+}
+}

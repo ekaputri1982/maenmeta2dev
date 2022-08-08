@@ -1,0 +1,15 @@
+Table "grouping_details" {
+  "id" BIGINT(20) [pk, not null, increment]
+  "gid" INT(11) [not null]
+  "account" INT(11) [not null]
+  "start" DATE [not null, default: "1970-01-01"]
+  "end" DATE [not null, default: "2999-12-31"]
+  "del" TINYINT(4) [not null, default: "0"]
+  "userid" INT(11) [not null]
+  "chop" DATETIME [default: NULL]
+
+Indexes {
+  (gid, account, start, end) [unique, name: "Index 2"]
+  gid [name: "gid"]
+}
+}

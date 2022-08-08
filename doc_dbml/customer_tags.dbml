@@ -1,0 +1,5 @@
+Table "customer_tags" {
+  "id" INT(11) [pk, not null, increment]
+  "crm_id" INT(11) [not null]
+  "tag_id" INT(11) [not null]
+}

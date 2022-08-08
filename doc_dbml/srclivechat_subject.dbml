@@ -1,0 +1,9 @@
+Table "srclivechat_subject" {
+  "id" INT(11) [pk, not null, increment]
+  "srclivechat_id" INT(11) [not null]
+  "subject_id" INT(11) [not null]
+
+Indexes {
+  (srclivechat_id, subject_id) [unique, name: "srclivechat_subject_id"]
+}
+}
